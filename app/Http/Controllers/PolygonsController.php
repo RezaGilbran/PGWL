@@ -106,7 +106,7 @@ class PolygonsController extends Controller
     {
         $imagefile = $this->polygons->find($id)->image;
 
-        if (!$this->points->destroy($id)) {
+        if (!$this->polygons->destroy($id)) {
             return redirect()->route('map')->with('error', 'Polygons failed to be deleted');
         }
 
